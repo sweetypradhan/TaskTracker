@@ -16,7 +16,6 @@ app.use(cors({
 mongoose.connect("mongodb+srv://todo:todolist@cluster0.5znj4.mongodb.net/", { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         console.log("Database connection is successful");
-        // Start the server only after a successful DB connection
         app.listen(5000, () => {
             console.log("Server is running on port 5000");
         });

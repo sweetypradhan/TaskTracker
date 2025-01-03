@@ -8,9 +8,6 @@ import axios from "axios";
 
 function CreateTask({ closeModal }) {
   const dispatch = useDispatch();
- /* The `const [task, setTask] = useState({ id: "", name: "", description: "", status: "todo" });`
-  `CreateTask` component is using the `useState` hook from React to initialize a state
- variable named `task` and a function to update that state named `setTask`. */
 
   const [task, setTask] = useState({
    
@@ -26,7 +23,7 @@ function CreateTask({ closeModal }) {
     try {
       const response = await axios.post(
         "http://localhost:5000/api/tasks",
-        task, // Pass the task data here
+        task, 
         {
           headers: {
             "Content-Type": "application/json",
@@ -53,9 +50,9 @@ function CreateTask({ closeModal }) {
       });
   
       if (response.status === 200) {
-        // Flatten the array if it's nested
+        
         const tasks = Array.isArray(response.data[0]) ? response.data[0] : response.data;
-        dispatch(addTask(tasks));  // Pass the flattened array
+        dispatch(addTask(tasks));  
       } else {
         console.error("Failed to fetch tasks:", response.data);
       }

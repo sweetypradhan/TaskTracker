@@ -80,7 +80,7 @@ function Task({ task }) {
   };
 
   const handleSaveEdit = async (e,id) => {
-    // Make sure the user has updated the name and description
+    
     console.log(id,e.target.value);
     
     if (taskName && taskDescription) {
@@ -105,7 +105,7 @@ function Task({ task }) {
             icon: "✏️",
             duration: 1000,
             style: {
-              background: "#38a169", // Green success background
+              background: "#38a169", 
               color: "#fff",
             },
           });

@@ -65,11 +65,11 @@ function Section({ status }) {
   };
 
   async function handleDrop(id) {
-    const newStatus = status; // Use the current section's status
+    const newStatus = status; 
     await updateStatus(id, newStatus);
 
     if (fetchTasks) {
-      await fetchTasks(); // Call fetchTasks if it's provided
+      await fetchTasks(); 
     }
 
     toast.success("Task moved successfully", {

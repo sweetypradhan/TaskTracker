@@ -19,9 +19,6 @@ router.get('/tasks', getAllTasks);
 // GET /tasks/:id: Fetch a task by its ID
 router.get('/tasks/:id', getTaskById);
 
-// PUT /tasks/:id: Update the task status
-// router.put('/tasks/:id', updateTaskStatus);
-
 // PUT /tasks/:id/status: Update the task status
 router.put('/tasks/:id/status', updateTaskStatus);
 
