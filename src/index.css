@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    @apply bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-gray-800 font-semibold shadow-lg p-4;
+  }
+  
+  .container {
+    max-width: 1200px;
+  }
